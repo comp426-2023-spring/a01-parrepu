@@ -1,0 +1,25 @@
+{
+  "name": "thisdawebserver",
+  "version": "1.0.0",
+  "description": "this is a webserver that I will use for the following assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
+  },
+  "author": "parrepu",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "web",
+    "server",
+    "port",
+    "node",
+    "fs",
+    "args",
+    "http"
+  ]
+}
