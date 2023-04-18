@@ -1,10 +1,17 @@
-// Require http module
+// Require http module (use 'require()' as specified in reference doc)
+const http = require('http');
 
 // Require fs module
+// Same structure as above
+const fs = require('fs');
 
-// Require minimist module (make sure you install this one via npm).
+// Require minimist module (make sure you install this one via npm -> Following was installed on Powershell).
+// Should also be the same structure as above.
+const minimist = require('minimist')
 
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
+
+
 
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
