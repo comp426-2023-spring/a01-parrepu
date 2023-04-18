@@ -50,7 +50,7 @@ const server = http.createServer((req, res) => {
     // set status code to 200
     res.statusCode = 200;
     // set a header with 'text/html' content type
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'text/html');
     // end with the data that you're reading in 
     res.end(data);
 }) 
