@@ -13,13 +13,13 @@ const minimist = require('minimist');
 // Specify the number '2' since the '--port=' argument comes after 'node server.js'.
 const arg1 = minimist(process.argv.slice(2)); 
 
-// Define a const `port` using the argument from the command line. 
+// Define a const `port` using the argument from the command line and use it in the following line 
 arg1["port"]
 const port = arg1.port || process.env.PORT || 3000; 
 
 // Make this const default to port 3000 if there is no argument given for `--port`.
-// Can you do an "if statement here"?
-//if (port == null){ // port would be null if there's no argument given for `--port` (Would this work? -> NO (Debugging))
+// Debugging: Can you do an "if statement here"? -> Better way to do this
+//if (port == null){ // port would be null if there's no argument given for `--port` (Would this work? -> NO)
     //port = 3000;
 //}
 
@@ -52,7 +52,7 @@ fs.readFile("./public/index.html", "utf8", (err, data) => { // Use the link spec
 const server = http.createServer((req, res) => {
     // set status code to 200
     res.statusCode = 200;
-    // set a header with 'text/html' content type
+    // set a header with 'text/html' content type (Debugging)
     res.setHeader('Content-Type', 'text/html');
     // end with the data that you're reading in 
     res.end(data);
@@ -62,8 +62,8 @@ const server = http.createServer((req, res) => {
 // Put the exact message `Server listening on port ${port}` on the console log. 
 server.listen(port, () => {
     // Debugging: '${port}' was copied onto the following line improperly
-    console.log(`Server listening on port ${port}`); // Was this message copied properly? -> Dynamically change based on input 
+    console.log(`Server listening on port ${port}`); // Dynamically change based on input 
 })
 
-}); // Put the following at the end of the file! -> Debugging
+}); // Debugging: Put the following at the end of the file! 
 // That's it! You're all done! (Do some debugging before committing -> DONE)
